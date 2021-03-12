@@ -382,6 +382,9 @@ function tokenize(text, options, callback) {
         pattern: /^\x1b\[38;5;(\d+)m/,
         sub: removeXterm256
     }, {
+        pattern: /^\x1b\[48;5;(\d+)m/,
+        sub: removeXterm256
+    }, {
         pattern: /^\n/,
         sub: newline
     },{
